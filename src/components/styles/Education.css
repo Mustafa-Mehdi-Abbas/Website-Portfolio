@@ -205,9 +205,8 @@
 
 @media only screen and (max-width: 1025px) {
   .education-section {
-    padding: 70px 0px;
-    padding-top: 220px;
-    margin-top: -200px;
+    padding: 64px 0 40px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -252,8 +251,8 @@
     font-size: 20px;
   }
   .education-section {
-    padding-top: 90px;
-    margin-top: -70px;
+    padding-top: 48px;
+    margin-top: 0;
     align-items: start;
     place-items: inherit;
     justify-content: left;

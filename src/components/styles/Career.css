@@ -195,9 +195,8 @@
 }
 @media only screen and (max-width: 1025px) {
   .career-section {
-    padding: 70px 0px;
-    padding-top: 220px;
-    margin-top: -200px;
+    padding: 64px 0 40px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -212,6 +211,10 @@
     width: 100%;
     padding-left: 10%;
     box-sizing: border-box;
+  }
+  .career-info h4 {
+    width: auto;
+    max-width: none;
   }
   .career-timeline {
     left: 0%;
@@ -241,9 +244,8 @@
     padding-left: 5%;
   }
   .career-section {
-    padding-top: 90px;
-    margin-top: -70px;
-
+    padding-top: 48px;
+    margin-top: 0;
     align-items: start;
     place-items: inherit;
     justify-content: left;

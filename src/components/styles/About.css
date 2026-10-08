@@ -30,6 +30,8 @@
   line-height: 1.55;
   letter-spacing: 0.2px;
   margin-top: 24px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .about-facts {
@@ -164,6 +166,18 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .about-me {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 32px;
+  }
+  .about-me h3 {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+  .about-me > p {
+    font-size: 16px;
+  }
   .about-facts,
   .about-highlights,
   .about-help-grid,

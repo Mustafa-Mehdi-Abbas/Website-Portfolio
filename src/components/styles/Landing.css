@@ -298,6 +298,50 @@ h2.landing-info-h2 {
   margin-left: -5px;
   overflow: hidden;
 }
+@media screen and (max-width: 1024px) {
+  .landing-intro,
+  .landing-copy,
+  .landing-info {
+    text-shadow: 0 2px 16px rgba(11, 8, 12, 0.9);
+  }
+  .landing-intro {
+    top: 88px;
+  }
+  .landing-copy {
+    bottom: 128px;
+    max-width: calc(100% - 8px);
+  }
+  .landing-info {
+    bottom: 28px;
+    max-width: calc(100% - 8px);
+  }
+  .character-model {
+    height: 58vh;
+    bottom: 64px;
+  }
+  .character-model::after {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .landing-intro h1 {
+    font-size: 26px;
+    line-height: 1.05;
+  }
+  .landing-copy {
+    bottom: 148px;
+  }
+  .landing-headline {
+    font-size: 14px;
+  }
+  .landing-summary {
+    font-size: 12.5px;
+  }
+  h2.landing-info-h2 {
+    font-size: 34px;
+    width: auto;
+  }
+}
 @media screen and (min-width: 500px) {
   .landing-circle2 {
     display: block;
@@ -406,6 +450,76 @@ h2.landing-info-h2 {
     right: 70%;
     width: 320px;
     max-width: 320px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .landing-section {
+    height: auto;
+    min-height: var(--vh);
+    display: flex;
+    flex-direction: column;
+  }
+  .landing-container,
+  .character-container {
+    display: contents;
+  }
+  .landing-intro {
+    order: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: var(--cWidth);
+    margin: 76px auto 0;
+  }
+  .character-model {
+    order: 2;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    height: 42vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  .character-model::before {
+    display: none;
+  }
+  .character-model::after {
+    height: 90px;
+    bottom: 0;
+    z-index: 1;
+  }
+  .landing-info {
+    order: 3;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+    width: var(--cWidth);
+    margin: 20px auto 0;
+    text-align: center;
+    z-index: 3;
+  }
+  .landing-info h2,
+  h2.landing-info-h2 {
+    justify-content: center;
+    width: auto;
+    margin-left: 0;
+  }
+  .landing-copy {
+    order: 4;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: var(--cWidth);
+    max-width: var(--cWidth);
+    margin: 16px auto 48px;
+    z-index: 3;
   }
 }
 @media screen and (min-width: 1600px) {

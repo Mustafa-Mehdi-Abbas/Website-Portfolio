@@ -93,19 +93,31 @@ a.contact-social {
 @media only screen and (max-width: 900px) {
   .contact-flex {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
   }
   .contact-flex p {
     margin-bottom: 0px;
+    overflow-wrap: anywhere;
   }
   .contact-flex h4 {
-    margin-top: 20px;
+    margin-top: 0;
   }
   .contact-section {
     margin-top: 24px;
-    padding-bottom: 120px;
+    padding-bottom: 96px;
+  }
+  .contact-section h3 {
+    font-size: 36px;
   }
   .contact-container {
-    width: calc(100% - 25px);
+    width: 100%;
+  }
+  .contact-box,
+  .contact-box:last-child {
+    align-items: flex-start;
+    text-align: left;
+  }
+  a.contact-social {
+    font-size: 18px;
   }
 }
