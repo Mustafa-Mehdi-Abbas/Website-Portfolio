@@ -208,6 +208,10 @@
   height: 100%;
   overflow: hidden;
 }
+.what-noTouch:hover .what-content-in,
+.what-content-active .what-content-in {
+  overflow: auto;
+}
 .what-content-in h5 {
   font-weight: 300;
   opacity: 0.5;

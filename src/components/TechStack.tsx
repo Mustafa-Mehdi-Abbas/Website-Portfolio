@@ -12,22 +12,37 @@ import {
 } from "@react-three/rapier";
 
 const textureLoader = new THREE.TextureLoader();
+// Stack logos (dual-mapped sphere textures with official brand marks).
 const imageUrls = [
+  "/images/python.webp",
+  "/images/pytorch.webp",
+  "/images/huggingface.webp?v=yellow",
+  "/images/langchain.webp",
+  "/images/fastapi.webp",
+  "/images/javascript.webp",
+  "/images/typescript.webp",
   "/images/react2.webp",
   "/images/next2.webp",
   "/images/node2.webp",
   "/images/express.webp",
-  "/images/mongo.webp",
+  "/images/postgresql.webp",
   "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/mongo.webp",
+  "/images/git.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
+// Even spread; Python / Hugging Face reduced. JS / React / Next boosted to show up.
+const textureWeights = [1, 2, 1, 2, 2, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1];
+const weightedTextureIndices = textureWeights.flatMap((weight, index) =>
+  Array(weight).fill(index)
+);
+
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
+const spheres = [...Array(30)].map((_, i) => ({
   scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+  textureIndex: weightedTextureIndices[i % weightedTextureIndices.length],
 }));
 
 type SphereProps = {
@@ -46,12 +61,14 @@ function SphereGeo({
   isActive,
 }: SphereProps) {
   const api = useRef<RapierRigidBody | null>(null);
+  const center = useMemo(() => new THREE.Vector3(0, -1.5, 0), []);
 
   useFrame((_state, delta) => {
     if (!isActive) return;
     delta = Math.min(0.1, delta);
     const impulse = vec
       .copy(api.current!.translation())
+      .sub(center)
       .normalize()
       .multiply(
         new THREE.Vector3(
@@ -192,8 +209,8 @@ const TechStack = () => {
           {spheres.map((props, i) => (
             <SphereGeo
               key={i}
-              {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              scale={props.scale}
+              material={materials[props.textureIndex]}
               isActive={isActive}
             />
           ))}

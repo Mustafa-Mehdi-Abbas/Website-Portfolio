@@ -69,7 +69,12 @@ export function setCharTimeline(
         .fromTo(".character-model", { x: 0 }, { x: "-25%", duration: 1 }, 0)
         .to(".landing-container", { opacity: 0, duration: 0.4 }, 0)
         .to(".landing-container", { y: "40%", duration: 0.8 }, 0)
-        .fromTo(".about-me", { y: "-50%" }, { y: "0%" }, 0);
+        .fromTo(
+          ".about-me",
+          { y: "12%", opacity: 0 },
+          { y: "0%", opacity: 1 },
+          0
+        );
 
       tl2
         .to(
@@ -183,6 +188,61 @@ export function setAllTimeline() {
   } else {
     careerTimeline.fromTo(
       ".career-section",
+      { y: 0 },
+      { y: 0, duration: 0.5, delay: 0.2 },
+      0
+    );
+  }
+
+  const educationTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".education-section",
+      start: "top 30%",
+      end: "100% center",
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+  });
+  educationTimeline
+    .fromTo(
+      ".education-timeline",
+      { maxHeight: "10%" },
+      { maxHeight: "100%", duration: 0.5 },
+      0
+    )
+    .fromTo(
+      ".education-timeline",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.1 },
+      0
+    )
+    .fromTo(
+      ".education-info-box",
+      { opacity: 0 },
+      { opacity: 1, stagger: 0.1, duration: 0.5 },
+      0
+    )
+    .fromTo(
+      ".education-dot",
+      { animationIterationCount: "infinite" },
+      {
+        animationIterationCount: "1",
+        delay: 0.3,
+        duration: 0.1,
+      },
+      0
+    );
+
+  if (window.innerWidth > 1024) {
+    educationTimeline.fromTo(
+      ".education-section",
+      { y: 0 },
+      { y: "20%", duration: 0.5, delay: 0.2 },
+      0
+    );
+  } else {
+    educationTimeline.fromTo(
+      ".education-section",
       { y: 0 },
       { y: 0, duration: 0.5, delay: 0.2 },
       0

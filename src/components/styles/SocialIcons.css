@@ -92,9 +92,10 @@ div.resume-button span {
 }
 @media only screen and (min-width: 768px) {
   .resume-button {
-    transform: none;
-    font-size: 20px;
-    line-height: 20px;
+    right: 8px;
+    bottom: 70px;
+    font-size: 14px;
+    line-height: 14px;
   }
   div.resume-button span {
     font-size: 23px;

@@ -2,11 +2,117 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/" /> -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://[YOUR-DOMAIN]" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moncy Yohannan - Creative Developer | Designer</title>
+    <style>
+      html,
+      body,
+      #root {
+        margin: 0;
+        min-height: 100%;
+        background: #0b080c;
+      }
+      html.is-loading,
+      html.is-loading body,
+      html.is-loading #root {
+        background: #eae5ec;
+      }
+      main.main-body:not(.main-active) {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <title>Mustafa Mehdi | Data Scientist, ML & AI Engineer, Karachi</title>
+    <meta
+      name="description"
+      content="Mustafa Mehdi is a Data Scientist & AI Engineer in Karachi building with Python, SQL, machine learning, LLMs, and RAG, turning data into products and decisions."
+    />
+    <meta name="author" content="Mustafa Mehdi" />
+    <meta name="theme-color" content="#0b080c" />
+    <meta
+      name="keywords"
+      content="Mustafa Mehdi, Data Scientist, ML Engineer, AI Engineer, Data Analyst, Full-Stack Developer, Python, SQL, machine learning, LLM, RAG, Karachi"
+    />
+
+    <meta
+      property="og:title"
+      content="Mustafa Mehdi | Data Scientist, ML & AI Engineer, Karachi"
+    />
+    <meta
+      property="og:description"
+      content="Data & AI professional in Karachi. Python, SQL, machine learning, LLMs, and RAG, turning data into products and decisions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://[YOUR-DOMAIN]" />
+    <meta property="og:image" content="https://[YOUR-DOMAIN]/og-cover.svg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Mustafa Mehdi" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mustafa Mehdi | Data Scientist, ML & AI Engineer, Karachi"
+    />
+    <meta
+      name="twitter:description"
+      content="Data & AI professional in Karachi. Python, SQL, machine learning, LLMs, and RAG, turning data into products and decisions."
+    />
+    <meta name="twitter:image" content="https://[YOUR-DOMAIN]/og-cover.svg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mustafa Mehdi",
+        "url": "https://[YOUR-DOMAIN]",
+        "image": "https://[YOUR-DOMAIN]/og-cover.svg",
+        "email": "mailto:mustafamehdi42@gmail.com",
+        "telephone": "+92-313-2925009",
+        "jobTitle": "Associate AI Engineer",
+        "description": "Data & AI professional who turns data into working products and decisions. Python, SQL, machine learning, LLMs, RAG, and full-stack delivery.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Karachi",
+          "addressCountry": "PK"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "NED University of Engineering & Technology"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Kodexo Labs"
+        },
+        "knowsAbout": [
+          "Python",
+          "SQL",
+          "machine learning",
+          "deep learning",
+          "NLP",
+          "LLMs",
+          "RAG",
+          "AI agents",
+          "data preprocessing",
+          "REST APIs",
+          "React",
+          "Node.js",
+          "PostgreSQL",
+          "MongoDB",
+          "Git"
+        ],
+        "sameAs": [
+          "https://github.com/Mustafa-Mehdi-Abbas",
+          "https://www.linkedin.com/in/mustafa-mehdi"
+        ]
+      }
+    </script>
   </head>
-  <body>
+  <body class="is-loading">
+    <script>
+      document.documentElement.classList.add("is-loading");
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

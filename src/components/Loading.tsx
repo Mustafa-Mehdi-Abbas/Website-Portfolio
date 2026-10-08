@@ -44,26 +44,38 @@ const Loading = ({ percent }: { percent: number }) => {
 
   return (
     <>
-      <div className="loading-header">
-        <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
-        </a>
-        <div className={`loaderGame ${clicked && "loader-out"}`}>
-          <div className="loaderGame-container">
-            <div className="loaderGame-in">
-              {[...Array(27)].map((_, index) => (
-                <div className="loaderGame-line" key={index}></div>
-              ))}
+      <div
+        className="loading-screen"
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 999999999,
+          backgroundColor: "#eae5ec",
+        }}
+      >
+        <div className="loading-header">
+          <a href="/#" className="loader-title" data-cursor="disable">
+            Mustafa
+          </a>
+          <div className={`loaderGame ${clicked && "loader-out"}`}>
+            <div className="loaderGame-container">
+              <div className="loaderGame-in">
+                {[...Array(27)].map((_, index) => (
+                  <div className="loaderGame-line" key={index}></div>
+                ))}
+              </div>
+              <div className="loaderGame-ball"></div>
             </div>
-            <div className="loaderGame-ball"></div>
           </div>
         </div>
-      </div>
-      <div className="loading-screen">
         <div className="loading-marquee">
           <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+            <span> Data &amp; AI Engineer</span>
+            <span> Data Scientist</span>
+            <span> ML Engineer</span>
+            <span> Data Analyst</span>
+            <span> Full-Stack Developer</span>
+            <span> Data &amp; AI Engineer</span>
           </Marquee>
         </div>
         <div

@@ -1,13 +1,14 @@
 .about-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: left;
-  place-items: center;
+  place-items: start;
   position: relative;
   opacity: 1;
   height: auto;
   width: var(--cWidth);
   margin: auto;
+  overflow: hidden;
 }
 .about-me {
   padding: 50px 0px;
@@ -23,11 +24,109 @@
   color: var(--accentColor);
 }
 
-.about-me p {
-  font-size: 33px;
-  font-weight: 600;
-  line-height: 36px;
+.about-me > p {
+  font-size: 17px;
+  font-weight: 450;
+  line-height: 1.55;
+  letter-spacing: 0.2px;
+  margin-top: 24px;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 18px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.about-fact-label {
+  font-size: 11px;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  opacity: 0.85;
+}
+.about-fact-value {
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.35;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+.about-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.about-highlight strong {
+  font-size: 22px;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+}
+.about-highlight span {
+  font-size: 12px;
+  font-weight: 300;
+  color: #c8c2cc;
+  letter-spacing: 0.2px;
+}
+
+.about-help,
+.about-process {
+  margin-top: 36px;
+}
+.about-help h4,
+.about-process h4 {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 450;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+}
+.about-help-grid,
+.about-process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.about-help-card,
+.about-process-step {
+  padding: 0;
+}
+.about-help-card h5,
+.about-process-step h5 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.about-help-card p,
+.about-process-step p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #c8c2cc;
+}
+.about-process-num {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--accentColor);
+  opacity: 0.8;
 }
 
 @media only screen and (min-width: 600px) {
@@ -50,22 +149,31 @@
     width: var(--cWidth);
     justify-content: right;
     max-width: 1920px;
-    height: var(--vh);
-    padding: 0px;
+    min-height: var(--vh);
+    height: auto;
+    padding: 80px 0;
     opacity: 1;
   }
   .about-me {
     padding: 0px;
     width: 50%;
   }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
+  .about-me > p {
+    font-size: clamp(16px, 1.15vw, 21px);
+    line-height: 1.55;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about-facts,
+  .about-highlights,
+  .about-help-grid,
+  .about-process-grid {
+    grid-template-columns: 1fr;
   }
 }
 @media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+  .about-me > p {
+    font-size: 1.35rem;
+    line-height: 1.55;
   }
 }

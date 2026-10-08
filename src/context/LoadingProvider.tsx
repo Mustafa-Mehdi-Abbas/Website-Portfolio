@@ -24,12 +24,18 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
-  useEffect(() => {}, [loading]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("is-loading", isLoading);
+    document.body.classList.toggle("is-loading", isLoading);
+  }, [isLoading]);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>
       {isLoading && <Loading percent={loading} />}
-      <main className="main-body">{children}</main>
+      <main className="main-body" aria-hidden={isLoading}>
+        {children}
+      </main>
     </LoadingContext.Provider>
   );
 };

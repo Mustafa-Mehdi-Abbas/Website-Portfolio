@@ -2,6 +2,15 @@ import { useEffect, useRef } from "react";
 import "./styles/WhatIDo.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+/*
+  Skills display: verified only.
+  Groups: Languages | AI & LLM | Data & ML | Backend | Frontend | Databases | Tools
+
+  // VERIFY (do not render until confirmed):
+  // Pandas, NumPy, Scikit-learn, Matplotlib/Seaborn, Excel, Power BI, Tableau,
+  // statistics, data cleaning, EDA, A/B testing, Docker, AWS
+*/
+
 const WhatIDo = () => {
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
   const setRef = (el: HTMLDivElement | null, index: number) => {
@@ -87,24 +96,36 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>DATA &amp; AI</h3>
+              <h4>Analysis, ML, LLMs</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Data preprocessing, machine learning, deep learning, NLP, RAG,
+                and AI agents, from cleaned datasets to working intelligent
+                systems.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Languages</h5>
               <div className="what-content-flex">
+                <div className="what-tags">Python</div>
+                <div className="what-tags">SQL</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+              </div>
+              <h5>AI &amp; LLM</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">LangGraph</div>
+                <div className="what-tags">Hugging Face</div>
+                <div className="what-tags">RAG</div>
+                <div className="what-tags">NLP</div>
+                <div className="what-tags">PyTorch</div>
+              </div>
+              <h5>Data &amp; ML</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">machine learning</div>
+                <div className="what-tags">deep learning</div>
+                <div className="what-tags">data preprocessing</div>
+                <div className="what-tags">PyTorch</div>
+                {/* // VERIFY: Pandas, NumPy, Scikit-learn, Matplotlib/Seaborn,
+                    Excel, Power BI, Tableau, statistics, data cleaning, EDA, A/B testing */}
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +149,40 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>FULL-STACK</h3>
+              <h4>APIs, interfaces, data</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Services, interfaces, and databases that put models and insights
+                in front of users with React, Node.js, and Git end to end.
               </p>
-              <h5>Skillset & tools</h5>
+              <h5>Backend</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Node.js</div>
+                <div className="what-tags">Express</div>
+                <div className="what-tags">REST APIs</div>
+              </div>
+              <h5>Frontend</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">React.js</div>
+                <div className="what-tags">Next.js</div>
+              </div>
+              <h5>Databases</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">MongoDB</div>
+              </div>
+              <h5>Tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Git</div>
+                <div className="what-tags">GitHub</div>
+                <div className="what-tags">Microsoft Office</div>
+                {/* // VERIFY: Docker, AWS */}
+              </div>
+              <h5>Soft skills</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Public speaking</div>
+                <div className="what-tags">Event planning &amp; management</div>
+                <div className="what-tags">Analytical problem solving</div>
               </div>
               <div className="what-arrow"></div>
             </div>
