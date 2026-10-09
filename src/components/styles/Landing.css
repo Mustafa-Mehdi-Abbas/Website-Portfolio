@@ -404,6 +404,7 @@ h2.landing-info-h2 {
     top: 50%;
     left: auto;
     right: 66%;
+    width: 300px;
     transform: translate(0%, -50%);
   }
 
@@ -433,6 +434,7 @@ h2.landing-info-h2 {
     top: 50%;
     left: auto;
     right: 70%;
+    width: 320px;
     transform: translate(0%, -50%);
   }
 
@@ -539,6 +541,9 @@ h2.landing-info-h2 {
   }
   h2.landing-info-h2 {
     font-size: 75px;
+  }
+  .landing-intro {
+    width: 380px;
   }
   .landing-copy {
     top: calc(50% + 120px);
